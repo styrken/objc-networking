@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'objc-networking' target in the 'objc-networking' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
