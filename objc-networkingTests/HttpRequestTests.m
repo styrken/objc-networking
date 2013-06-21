@@ -10,14 +10,10 @@
 #import "HttpRequest.h"
 #import "HttpResponse.h"
 
-@implementation HttpRequestTests
+@interface HttpRequestTests () <HttpRequestProtocol>
+@end
 
-- (void) testRequestStartStates
-{
-	HttpRequest *request = [[HttpRequest alloc] init];
-	[request start];
-	STAssertTrue(request.requestState == HttpRequestStateDownloading, @"RequestState did not change to downloading");
-}
+@implementation HttpRequestTests
 
 - (void) testRequestPauseStates
 {
@@ -41,7 +37,7 @@
 	STAssertTrue(request.requestMethod == HttpRequestMethodPost, @"RequestMethod was not POST");
 }
 
-- (void) testDownloadOfFile
+- (void) testDownloadOfFileSynchronous
 {
 	// This is not a real unittest but i wan't to test whole flow so i wont be mocking anything in this
 	// test, sorry :-)
@@ -57,3 +53,4 @@
 }
 
 @end
+

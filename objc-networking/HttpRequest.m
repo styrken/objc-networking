@@ -73,6 +73,9 @@
 
 - (void) start
 {
+	if(self.requestUrl == nil)
+		return;
+
 	if(self.requestState != HttpRequestStateDownloading)
 	{
 		self.requestState = HttpRequestStateDownloading;
@@ -165,8 +168,6 @@
 
 	[urlRequest setValue:@"Objc-Networking /1.0" forHTTPHeaderField:@"User-Agent"];
 
-	NSString *args = [self buildArgs];
-
 	switch (self.requestMethod) {
 		case HttpRequestMethodGet:
 			[urlRequest setHTTPMethod:@"GET"];
@@ -181,6 +182,8 @@
 		default:
 		case HttpRequestMethodPost:
 		{
+			NSData *args = [[self buildArgs] dataUsingEncoding:NSUTF8StringEncoding];
+
 			[urlRequest setValue:[NSString stringWithFormat:@"%i", args.length] forHTTPHeaderField:@"Content-Length"];
 			[urlRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 			[urlRequest setHTTPMethod:@"POST"];
@@ -220,7 +223,7 @@
 	{
 		self.requestResponse.expectedTotalBytes = response.expectedContentLength;
 	}
-
+	
 	self.requestResponse.expectedRemainingBytes = response.expectedContentLength;
 	self.requestResponse.responseCode = ((NSHTTPURLResponse*)response).statusCode;
 	self.startedTime = [[NSDate date] timeIntervalSince1970];
