@@ -10,6 +10,9 @@
 @class HttpResponse;
 @class HttpRequest;
 
+/** Http Request Protocol
+ A protocol you can implement to get notifications about a request
+*/
 @protocol HttpRequestProtocol <NSObject>
 - (void) didStartRequest:(HttpRequest*)request;
 - (void) didStopRequest:(HttpRequest*)request;
@@ -17,6 +20,9 @@
 - (void) estimatedTimeLeft:(long long int)seconds forRequest:(HttpRequest*)request;
 @end
 
+/** Http Request Type
+ What kind of type is your request
+*/
 enum {
 	HttpRequestTypePost,
 	HttpRequestTypeGet,
@@ -25,6 +31,9 @@ enum {
 };
 typedef NSUInteger HttpRequestType;
 
+/** Http Request State
+ The current state of your request
+*/
 enum {
 	HttpRequestStateUnknown,
 	HttpRequestStateDownloading,
