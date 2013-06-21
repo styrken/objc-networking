@@ -10,4 +10,16 @@
 
 @implementation HttpResponse
 
+- (id) init
+{
+	self = [super init];
+	if(self)
+	{
+		self.data = [[NSMutableData alloc] init];
+		self.responseCode = 0;
+	}
+
+	return self;
+}
+
 @end

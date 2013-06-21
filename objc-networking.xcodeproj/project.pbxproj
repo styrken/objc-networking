@@ -20,6 +20,7 @@
 		3B111E4E17733FB500BE0738 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E4C17733FB400BE0738 /* HttpRequest.m */; };
 		3B111E511773401700BE0738 /* HttpRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B111E4F1773401700BE0738 /* HttpRequestQueue.h */; };
 		3B111E521773401700BE0738 /* HttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E501773401700BE0738 /* HttpRequestQueue.m */; };
+		3B111E551774698C00BE0738 /* HttpRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E541774698C00BE0738 /* HttpRequestTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3B111E4C17733FB400BE0738 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		3B111E4F1773401700BE0738 /* HttpRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestQueue.h; sourceTree = "<group>"; };
 		3B111E501773401700BE0738 /* HttpRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestQueue.m; sourceTree = "<group>"; };
+		3B111E531774698B00BE0738 /* HttpRequestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestTests.h; sourceTree = "<group>"; };
+		3B111E541774698C00BE0738 /* HttpRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				3B111E3C17733ED300BE0738 /* objc_networkingTests.h */,
 				3B111E3D17733ED300BE0738 /* objc_networkingTests.m */,
 				3B111E3717733ED300BE0738 /* Supporting Files */,
+				3B111E531774698B00BE0738 /* HttpRequestTests.h */,
+				3B111E541774698C00BE0738 /* HttpRequestTests.m */,
 			);
 			path = "objc-networkingTests";
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B111E3E17733ED300BE0738 /* objc_networkingTests.m in Sources */,
+				3B111E551774698C00BE0738 /* HttpRequestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
