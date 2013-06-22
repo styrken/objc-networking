@@ -12,18 +12,14 @@ Simple and lightweight objective-c http-networking library.
 
 **Example:**
 
-First import some headers
-
-```objective-c
-#import <objc-networking-ios/HttpRequest.h>
-#import <objc-networking-ios/HttpResponse.h>
-
-```
-
-Then implement the procotol
+Import headers and implement the procotol
 
 YourClass.h
 ```objective-c
+#import <UIKit/UIKit.h>
+#import <objc-networking-ios/HttpRequest.h>
+#import <objc-networking-ios/HttpResponse.h>
+
 @interface YourClass : UIViewControlelr <HttpRequestProtocol>
 
 @end
@@ -47,7 +43,13 @@ YourClass.m
 Then start a request
 
 ```objective-c
-HttpRequest *request = [HttpRequest requestWithURLString:@"http://lorempixel.com/1920/1920/"];
-request.delegate = self;
-[request start];
+
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+
+	HttpRequest *request = [HttpRequest requestWithURLString:@"http://lorempixel.com/1920/1920/"];
+	request.delegate = self;
+	[request start];
+}
 ```
