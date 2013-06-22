@@ -13,6 +13,11 @@
 @property (nonatomic, assign, readwrite) HttpRequestState requestState;
 @property (nonatomic, assign) NSURLConnection *connection;
 @property (nonatomic, assign) NSTimeInterval startedTime;
+
+@property (nonatomic, assign) long long int expectedTotalBytes;
+@property (nonatomic, assign) long long int expectedRemainingBytes;
+@property (nonatomic, assign) unsigned long long int downloadedBytes;
+
 @end
 
 @implementation HttpRequest
@@ -134,7 +139,7 @@
 	{
 		[self.connection cancel];
 		self.requestState = HttpRequestStatePaused;
-		self.requestResponse.downloadedBytes = 0;
+		self.downloadedBytes = 0;
 
 		if([self.delegate respondsToSelector:@selector(didPauseRequest:)])
 		{
@@ -149,9 +154,9 @@
 	{
 		[self.connection cancel];
 		self.requestState = HttpRequestStateCancelled;
-		self.requestResponse.downloadedBytes = 0;
-		self.requestResponse.expectedRemainingBytes = 0;
-		self.requestResponse.expectedTotalBytes = 0;
+		self.downloadedBytes = 0;
+		self.expectedRemainingBytes = 0;
+		self.expectedTotalBytes = 0;
 
 		if([self.delegate respondsToSelector:@selector(didStopRequest:)])
 		{
@@ -219,12 +224,12 @@
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-	if(self.requestResponse.expectedTotalBytes == 0)
+	if(self.expectedTotalBytes == 0)
 	{
-		self.requestResponse.expectedTotalBytes = response.expectedContentLength;
+		self.expectedTotalBytes = response.expectedContentLength;
 	}
 	
-	self.requestResponse.expectedRemainingBytes = response.expectedContentLength;
+	self.expectedRemainingBytes = response.expectedContentLength;
 	self.requestResponse.responseCode = ((NSHTTPURLResponse*)response).statusCode;
 	self.startedTime = [[NSDate date] timeIntervalSince1970];
 }
@@ -235,7 +240,7 @@
 	{
 		[self.requestResponse.data appendData:data];
 
-		self.requestResponse.downloadedBytes += data.length;
+		self.downloadedBytes += data.length;
 
 		if([self.delegate respondsToSelector:@selector(estimatedTimeLeft:forRequest:)])
 		{
@@ -281,11 +286,11 @@
 	NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
 	NSTimeInterval elapsedTime = currentTime - self.startedTime;
 
-	double remainingBytes = self.requestResponse.expectedRemainingBytes - self.requestResponse.downloadedBytes;
+	double remainingBytes = self.expectedRemainingBytes - self.downloadedBytes;
 
-	if(self.requestResponse.downloadedBytes > 0)
+	if(self.downloadedBytes > 0)
 	{
-		double currentDownloadSpeed = (double)elapsedTime/self.requestResponse.downloadedBytes;
+		double currentDownloadSpeed = (double)elapsedTime/self.downloadedBytes;
 		return remainingBytes*currentDownloadSpeed;
 	}
 
