@@ -20,7 +20,7 @@ YourClass.h
 #import <objc-networking-ios/HttpRequest.h>
 #import <objc-networking-ios/HttpResponse.h>
 
-@interface YourClass : UIViewControlelr <HttpRequestProtocol>
+@interface YourClass : UIViewController <HttpRequestProtocol>
 
 @end
 ```
