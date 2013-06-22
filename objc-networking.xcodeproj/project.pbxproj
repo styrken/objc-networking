@@ -435,6 +435,7 @@
 				3B111E4317733ED300BE0738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B111E4417733ED300BE0738 /* Build configuration list for PBXNativeTarget "objc-networkingTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +444,7 @@
 				3B111E4617733ED300BE0738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
