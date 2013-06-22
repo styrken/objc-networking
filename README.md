@@ -54,7 +54,7 @@ Then start a request
 }
 ```
 
-### Start, pasue, cancel request ###
+### Start, pause, cancel requests ###
 
 Need documentation
 
