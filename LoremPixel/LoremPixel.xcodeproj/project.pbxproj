@@ -149,9 +149,9 @@
 		3B20578B1775DD1A00882A5F /* LoremPixel */ = {
 			isa = PBXGroup;
 			children = (
+				3B20578C1775DD1A00882A5F /* Supporting Files */,
 				3B2057941775DD1A00882A5F /* AppDelegate.h */,
 				3B2057951775DD1A00882A5F /* AppDelegate.m */,
-				3B20578C1775DD1A00882A5F /* Supporting Files */,
 				3B742BA01775E50800F8EAAB /* ImageViewController.h */,
 				3B742BA11775E50800F8EAAB /* ImageViewController.m */,
 				3B742BA21775E50800F8EAAB /* ImageViewController.xib */,
