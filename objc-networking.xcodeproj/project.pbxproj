@@ -8,19 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		3B111E1F17733ED300BE0738 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E1E17733ED300BE0738 /* Cocoa.framework */; };
-		3B111E2917733ED300BE0738 /* objc_networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E2817733ED300BE0738 /* objc_networking.m */; };
 		3B111E3117733ED300BE0738 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E3017733ED300BE0738 /* SenTestingKit.framework */; };
 		3B111E3217733ED300BE0738 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E1E17733ED300BE0738 /* Cocoa.framework */; };
 		3B111E3517733ED300BE0738 /* libobjc-networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E1B17733ED300BE0738 /* libobjc-networking.a */; };
 		3B111E3B17733ED300BE0738 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B111E3917733ED300BE0738 /* InfoPlist.strings */; };
 		3B111E3E17733ED300BE0738 /* objc_networkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E3D17733ED300BE0738 /* objc_networkingTests.m */; };
-		3B111E4917733F7C00BE0738 /* HttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B111E4717733F7C00BE0738 /* HttpResponse.h */; };
-		3B111E4A17733F7C00BE0738 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E4817733F7C00BE0738 /* HttpResponse.m */; };
-		3B111E4D17733FB400BE0738 /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B111E4B17733FB400BE0738 /* HttpRequest.h */; };
-		3B111E4E17733FB500BE0738 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E4C17733FB400BE0738 /* HttpRequest.m */; };
-		3B111E511773401700BE0738 /* HttpRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B111E4F1773401700BE0738 /* HttpRequestQueue.h */; };
-		3B111E521773401700BE0738 /* HttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E501773401700BE0738 /* HttpRequestQueue.m */; };
 		3B111E551774698C00BE0738 /* HttpRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E541774698C00BE0738 /* HttpRequestTests.m */; };
+		3BEEEAC61775E286009A9401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEEAC51775E286009A9401 /* Foundation.framework */; };
+		3BEEEADE1775E375009A9401 /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEEEAD81775E375009A9401 /* HttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEEEADF1775E375009A9401 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEAD91775E375009A9401 /* HttpRequest.m */; };
+		3BEEEAE01775E375009A9401 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEAD91775E375009A9401 /* HttpRequest.m */; };
+		3BEEEAE11775E375009A9401 /* HttpRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEEEAE21775E375009A9401 /* HttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */; };
+		3BEEEAE31775E375009A9401 /* HttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */; };
+		3BEEEAE41775E375009A9401 /* HttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEEEADC1775E375009A9401 /* HttpResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEEEAE51775E375009A9401 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADD1775E375009A9401 /* HttpResponse.m */; };
+		3BEEEAE61775E375009A9401 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADD1775E375009A9401 /* HttpResponse.m */; };
+		3BEEEAE81775E3B1009A9401 /* HttpRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BEEEAD81775E375009A9401 /* HttpRequest.h */; };
+		3BEEEAE91775E3B6009A9401 /* HttpRequestQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */; };
+		3BEEEAEA1775E3B8009A9401 /* HttpResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BEEEADC1775E375009A9401 /* HttpResponse.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3BEEEAC21775E286009A9401 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				3BEEEAE81775E3B1009A9401 /* HttpRequest.h in CopyFiles */,
+				3BEEEAE91775E3B6009A9401 /* HttpRequestQueue.h in CopyFiles */,
+				3BEEEAEA1775E3B8009A9401 /* HttpResponse.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3B111E1B17733ED300BE0738 /* libobjc-networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B111E1E17733ED300BE0738 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -40,22 +61,23 @@
 		3B111E2217733ED300BE0738 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3B111E2317733ED300BE0738 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B111E2617733ED300BE0738 /* objc-networking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-networking-Prefix.pch"; sourceTree = "<group>"; };
-		3B111E2717733ED300BE0738 /* objc_networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objc_networking.h; sourceTree = "<group>"; };
-		3B111E2817733ED300BE0738 /* objc_networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_networking.m; sourceTree = "<group>"; };
 		3B111E2F17733ED300BE0738 /* objc-networkingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-networkingTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B111E3017733ED300BE0738 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B111E3817733ED300BE0738 /* objc-networkingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "objc-networkingTests-Info.plist"; sourceTree = "<group>"; };
 		3B111E3A17733ED300BE0738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B111E3C17733ED300BE0738 /* objc_networkingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objc_networkingTests.h; sourceTree = "<group>"; };
 		3B111E3D17733ED300BE0738 /* objc_networkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_networkingTests.m; sourceTree = "<group>"; };
-		3B111E4717733F7C00BE0738 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
-		3B111E4817733F7C00BE0738 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
-		3B111E4B17733FB400BE0738 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		3B111E4C17733FB400BE0738 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		3B111E4F1773401700BE0738 /* HttpRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestQueue.h; sourceTree = "<group>"; };
-		3B111E501773401700BE0738 /* HttpRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestQueue.m; sourceTree = "<group>"; };
 		3B111E531774698B00BE0738 /* HttpRequestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestTests.h; sourceTree = "<group>"; };
 		3B111E541774698C00BE0738 /* HttpRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestTests.m; sourceTree = "<group>"; };
+		3BEEEAC41775E286009A9401 /* libobjc-networking-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-networking-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEEEAC51775E286009A9401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3BEEEAC91775E286009A9401 /* objc-networking-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-networking-ios-Prefix.pch"; sourceTree = "<group>"; };
+		3BEEEAD81775E375009A9401 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		3BEEEAD91775E375009A9401 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestQueue.h; sourceTree = "<group>"; };
+		3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestQueue.m; sourceTree = "<group>"; };
+		3BEEEADC1775E375009A9401 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
+		3BEEEADD1775E375009A9401 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +99,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BEEEAC11775E286009A9401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEEEAC61775E286009A9401 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3B111E1217733ED300BE0738 = {
 			isa = PBXGroup;
 			children = (
-				3B111E2417733ED300BE0738 /* objc-networking */,
-				3B111E3617733ED300BE0738 /* objc-networkingTests */,
+				3BEEEAD71775E375009A9401 /* src */,
+				3BEEEAE71775E393009A9401 /* targets */,
 				3B111E1D17733ED300BE0738 /* Frameworks */,
 				3B111E1C17733ED300BE0738 /* Products */,
 			);
@@ -95,6 +125,7 @@
 			children = (
 				3B111E1B17733ED300BE0738 /* libobjc-networking.a */,
 				3B111E2F17733ED300BE0738 /* objc-networkingTests.octest */,
+				3BEEEAC41775E286009A9401 /* libobjc-networking-ios.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +135,7 @@
 			children = (
 				3B111E1E17733ED300BE0738 /* Cocoa.framework */,
 				3B111E3017733ED300BE0738 /* SenTestingKit.framework */,
+				3BEEEAC51775E286009A9401 /* Foundation.framework */,
 				3B111E2017733ED300BE0738 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -123,14 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				3B111E2517733ED300BE0738 /* Supporting Files */,
-				3B111E2717733ED300BE0738 /* objc_networking.h */,
-				3B111E2817733ED300BE0738 /* objc_networking.m */,
-				3B111E4717733F7C00BE0738 /* HttpResponse.h */,
-				3B111E4817733F7C00BE0738 /* HttpResponse.m */,
-				3B111E4B17733FB400BE0738 /* HttpRequest.h */,
-				3B111E4C17733FB400BE0738 /* HttpRequest.m */,
-				3B111E4F1773401700BE0738 /* HttpRequestQueue.h */,
-				3B111E501773401700BE0738 /* HttpRequestQueue.m */,
 			);
 			path = "objc-networking";
 			sourceTree = "<group>";
@@ -164,6 +188,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3BEEEAC71775E286009A9401 /* objc-networking-ios */ = {
+			isa = PBXGroup;
+			children = (
+				3BEEEAC81775E286009A9401 /* Supporting Files */,
+			);
+			path = "objc-networking-ios";
+			sourceTree = "<group>";
+		};
+		3BEEEAC81775E286009A9401 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BEEEAC91775E286009A9401 /* objc-networking-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BEEEAD71775E375009A9401 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3BEEEAD81775E375009A9401 /* HttpRequest.h */,
+				3BEEEAD91775E375009A9401 /* HttpRequest.m */,
+				3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */,
+				3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */,
+				3BEEEADC1775E375009A9401 /* HttpResponse.h */,
+				3BEEEADD1775E375009A9401 /* HttpResponse.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3BEEEAE71775E393009A9401 /* targets */ = {
+			isa = PBXGroup;
+			children = (
+				3B111E2417733ED300BE0738 /* objc-networking */,
+				3BEEEAC71775E286009A9401 /* objc-networking-ios */,
+				3B111E3617733ED300BE0738 /* objc-networkingTests */,
+			);
+			name = targets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -171,9 +234,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B111E4917733F7C00BE0738 /* HttpResponse.h in Headers */,
-				3B111E4D17733FB400BE0738 /* HttpRequest.h in Headers */,
-				3B111E511773401700BE0738 /* HttpRequestQueue.h in Headers */,
+				3BEEEADE1775E375009A9401 /* HttpRequest.h in Headers */,
+				3BEEEAE11775E375009A9401 /* HttpRequestQueue.h in Headers */,
+				3BEEEAE41775E375009A9401 /* HttpResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +279,23 @@
 			productReference = 3B111E2F17733ED300BE0738 /* objc-networkingTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		3BEEEAC31775E286009A9401 /* objc-networking-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEEEACE1775E286009A9401 /* Build configuration list for PBXNativeTarget "objc-networking-ios" */;
+			buildPhases = (
+				3BEEEAC01775E286009A9401 /* Sources */,
+				3BEEEAC11775E286009A9401 /* Frameworks */,
+				3BEEEAC21775E286009A9401 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "objc-networking-ios";
+			productName = "objc-networking-ios";
+			productReference = 3BEEEAC41775E286009A9401 /* libobjc-networking-ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -238,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				3B111E1A17733ED300BE0738 /* objc-networking */,
+				3BEEEAC31775E286009A9401 /* objc-networking-ios */,
 				3B111E2E17733ED300BE0738 /* objc-networkingTests */,
 			);
 		};
@@ -275,10 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B111E2917733ED300BE0738 /* objc_networking.m in Sources */,
-				3B111E4A17733F7C00BE0738 /* HttpResponse.m in Sources */,
-				3B111E4E17733FB500BE0738 /* HttpRequest.m in Sources */,
-				3B111E521773401700BE0738 /* HttpRequestQueue.m in Sources */,
+				3BEEEADF1775E375009A9401 /* HttpRequest.m in Sources */,
+				3BEEEAE21775E375009A9401 /* HttpRequestQueue.m in Sources */,
+				3BEEEAE51775E375009A9401 /* HttpResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +368,16 @@
 			files = (
 				3B111E3E17733ED300BE0738 /* objc_networkingTests.m in Sources */,
 				3B111E551774698C00BE0738 /* HttpRequestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEEEAC01775E286009A9401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEEEAE01775E375009A9401 /* HttpRequest.m in Sources */,
+				3BEEEAE31775E375009A9401 /* HttpRequestQueue.m in Sources */,
+				3BEEEAE61775E375009A9401 /* HttpResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +468,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objc-networking/objc-networking-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -387,6 +480,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objc-networking/objc-networking-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -413,6 +509,35 @@
 				INFOPLIST_FILE = "objc-networkingTests/objc-networkingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		3BEEEACF1775E286009A9401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/objc_networking_ios.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-networking-ios/objc-networking-ios-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3BEEEAD01775E286009A9401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/objc_networking_ios.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-networking-ios/objc-networking-ios-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -445,6 +570,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3BEEEACE1775E286009A9401 /* Build configuration list for PBXNativeTarget "objc-networking-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEEEACF1775E286009A9401 /* Debug */,
+				3BEEEAD01775E286009A9401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

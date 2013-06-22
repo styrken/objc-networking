@@ -21,6 +21,9 @@
 		3B2057A61775DD1B00882A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2057871775DD1A00882A5F /* Foundation.framework */; };
 		3B2057AE1775DD1B00882A5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B2057AC1775DD1B00882A5F /* InfoPlist.strings */; };
 		3B2057B11775DD1B00882A5F /* LoremPixelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2057B01775DD1B00882A5F /* LoremPixelTests.m */; };
+		3B742BA31775E50800F8EAAB /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B742BA11775E50800F8EAAB /* ImageViewController.m */; };
+		3B742BA41775E50800F8EAAB /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B742BA21775E50800F8EAAB /* ImageViewController.xib */; };
+		3B742BA71775E69300F8EAAB /* libobjc-networking-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B742B971775E46900F8EAAB /* libobjc-networking-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3B2057811775DD1A00882A5F;
 			remoteInfo = LoremPixel;
+		};
+		3B742B941775E46900F8EAAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B111E1B17733ED300BE0738;
+			remoteInfo = "objc-networking";
+		};
+		3B742B961775E46900F8EAAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BEEEAC41775E286009A9401;
+			remoteInfo = "objc-networking-ios";
+		};
+		3B742B981775E46900F8EAAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B111E2F17733ED300BE0738;
+			remoteInfo = "objc-networkingTests";
+		};
+		3B742BA51775E68900F8EAAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEEEAC31775E286009A9401;
+			remoteInfo = "objc-networking-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +84,10 @@
 		3B2057AD1775DD1B00882A5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B2057AF1775DD1B00882A5F /* LoremPixelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoremPixelTests.h; sourceTree = "<group>"; };
 		3B2057B01775DD1B00882A5F /* LoremPixelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoremPixelTests.m; sourceTree = "<group>"; };
+		3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "objc-networking.xcodeproj"; path = "../objc-networking.xcodeproj"; sourceTree = "<group>"; };
+		3B742BA01775E50800F8EAAB /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		3B742BA11775E50800F8EAAB /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		3B742BA21775E50800F8EAAB /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B742BA71775E69300F8EAAB /* libobjc-networking-ios.a in Frameworks */,
 				3B2057861775DD1A00882A5F /* UIKit.framework in Frameworks */,
 				3B2057881775DD1A00882A5F /* Foundation.framework in Frameworks */,
 				3B20578A1775DD1A00882A5F /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +118,7 @@
 		3B2057791775DD1A00882A5F = {
 			isa = PBXGroup;
 			children = (
+				3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */,
 				3B20578B1775DD1A00882A5F /* LoremPixel */,
 				3B2057A91775DD1B00882A5F /* LoremPixelTests */,
 				3B2057841775DD1A00882A5F /* Frameworks */,
@@ -115,6 +152,9 @@
 				3B2057941775DD1A00882A5F /* AppDelegate.h */,
 				3B2057951775DD1A00882A5F /* AppDelegate.m */,
 				3B20578C1775DD1A00882A5F /* Supporting Files */,
+				3B742BA01775E50800F8EAAB /* ImageViewController.h */,
+				3B742BA11775E50800F8EAAB /* ImageViewController.m */,
+				3B742BA21775E50800F8EAAB /* ImageViewController.xib */,
 			);
 			path = LoremPixel;
 			sourceTree = "<group>";
@@ -152,6 +192,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3B742B8F1775E46900F8EAAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B742B951775E46900F8EAAB /* libobjc-networking.a */,
+				3B742B971775E46900F8EAAB /* libobjc-networking-ios.a */,
+				3B742B991775E46900F8EAAB /* objc-networkingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +216,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B742BA61775E68900F8EAAB /* PBXTargetDependency */,
 			);
 			name = LoremPixel;
 			productName = LoremPixel;
@@ -210,6 +261,12 @@
 			mainGroup = 3B2057791775DD1A00882A5F;
 			productRefGroup = 3B2057831775DD1A00882A5F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B742B8F1775E46900F8EAAB /* Products */;
+					ProjectRef = 3B742B8E1775E46900F8EAAB /* objc-networking.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B2057811775DD1A00882A5F /* LoremPixel */,
@@ -217,6 +274,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B742B951775E46900F8EAAB /* libobjc-networking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libobjc-networking.a";
+			remoteRef = 3B742B941775E46900F8EAAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B742B971775E46900F8EAAB /* libobjc-networking-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libobjc-networking-ios.a";
+			remoteRef = 3B742B961775E46900F8EAAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B742B991775E46900F8EAAB /* objc-networkingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "objc-networkingTests.octest";
+			remoteRef = 3B742B981775E46900F8EAAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B2057801775DD1A00882A5F /* Resources */ = {
@@ -227,6 +308,7 @@
 				3B2057981775DD1A00882A5F /* Default.png in Resources */,
 				3B20579A1775DD1A00882A5F /* Default@2x.png in Resources */,
 				3B20579C1775DD1A00882A5F /* Default-568h@2x.png in Resources */,
+				3B742BA41775E50800F8EAAB /* ImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +345,7 @@
 			files = (
 				3B2057921775DD1A00882A5F /* main.m in Sources */,
 				3B2057961775DD1A00882A5F /* AppDelegate.m in Sources */,
+				3B742BA31775E50800F8EAAB /* ImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +364,11 @@
 			isa = PBXTargetDependency;
 			target = 3B2057811775DD1A00882A5F /* LoremPixel */;
 			targetProxy = 3B2057A71775DD1B00882A5F /* PBXContainerItemProxy */;
+		};
+		3B742BA61775E68900F8EAAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "objc-networking-ios";
+			targetProxy = 3B742BA51775E68900F8EAAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>objc-networking-ios.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>objc-networking.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>3B111E2E17733ED300BE0738</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BEEEAB01775DFD8009A9401</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BEEEAC31775E286009A9401</key>
 		<dict>
 			<key>primary</key>
 			<true/>
