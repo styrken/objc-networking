@@ -53,3 +53,15 @@ Then start a request
 	[request start];
 }
 ```
+
+### Start, pasue, cancel request ###
+
+Need documentation
+
+### Using the HttpRequestQueue ###
+
+Need documentation
+
+### Uploading files ###
+
+Need documentation
