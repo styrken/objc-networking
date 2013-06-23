@@ -13,7 +13,7 @@
 /** Http Request Protocol
  A protocol you can implement to get notifications about a request
 */
-@protocol HttpRequestProtocol <NSObject>
+@protocol AVHttpRequestProtocol <NSObject>
 - (void) didFinishRequest:(AVHttpRequest*)request withResponse:(AVHttpResponse*)response;
 - (void) didFailRequest:(AVHttpRequest*)request withError:(NSError*)error;
 @optional
@@ -76,7 +76,7 @@ typedef NSUInteger AVHttpRequestType;
 @property (nonatomic, strong) NSMutableDictionary *arguments;
 @property (nonatomic, strong) NSMutableDictionary *headers;
 
-@property (nonatomic, weak) id<HttpRequestProtocol> delegate;
+@property (nonatomic, weak) id<AVHttpRequestProtocol> delegate;
 
 @property (nonatomic, assign) AVHttpRequestType type;
 @property (nonatomic, assign) AVHttpRequestMethod method;

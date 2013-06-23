@@ -4,8 +4,9 @@
     <list default="true" id="f96fff04-d058-450f-90cf-e84499bdda36" name="Default" comment="" />
     <ignored path="LoremPixel.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AVHttpRequest.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984271837" ignored="false" />
+    <file path="/AVHttpRequest.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984561898" ignored="false" />
     <file path="/AVHttpResponse.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984448187" ignored="false" />
+    <file path="$PROJECT_DIR$/LoremPixel/ImageViewController.m" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984562278" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,19 +62,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AVHttpRequest.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AVHttpRequest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="33" selection-start="2675" selection-end="2679" vertical-scroll-proportion="-0.024252223">
+            <state line="196" column="76" selection-start="4425" selection-end="4425" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AVHttpRequest.h" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AVHttpRequest.h" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="52" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
+            <state line="15" column="12" selection-start="330" selection-end="330" vertical-scroll-proportion="0.18189168">
               <folding />
             </state>
           </provider>
@@ -89,8 +90,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../src/AVHttpRequest.h" />
         <option value="$PROJECT_DIR$/../src/AVHttpResponse.h" />
+        <option value="$PROJECT_DIR$/../src/AVHttpRequest.h" />
       </list>
     </option>
   </component>
@@ -350,13 +351,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="52" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../objc-networkingTests/objc_networkingTests.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -387,7 +381,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="33" selection-start="2675" selection-end="2679" vertical-scroll-proportion="-0.024252223">
+        <state line="196" column="76" selection-start="4425" selection-end="4425" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="12" selection-start="330" selection-end="330" vertical-scroll-proportion="0.18189168">
           <folding />
         </state>
       </provider>

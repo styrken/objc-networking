@@ -11,7 +11,7 @@
 #import <objc-networking-ios/AVHttpResponse.h>
 
 
-@interface ImageViewController () <HttpRequestProtocol>
+@interface ImageViewController () <AVHttpRequestProtocol>
 
 @end
 
