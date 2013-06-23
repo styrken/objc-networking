@@ -11,6 +11,8 @@
 
 @interface AVHttpRequest () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 @property (nonatomic, assign, readwrite) AVHttpRequestState state;
+@property (nonatomic, strong, readwrite) NSMutableDictionary *arguments;
+@property (nonatomic, strong, readwrite) NSMutableDictionary *headers;
 @property (nonatomic, assign) NSURLConnection *connection;
 @property (nonatomic, assign) NSTimeInterval startedTime;
 

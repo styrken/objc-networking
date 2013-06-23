@@ -83,7 +83,7 @@
       <file leaf-file-name="AVHttpRequest.h" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="33" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.8302344">
+            <state line="65" column="67" selection-start="2033" selection-end="2033" vertical-scroll-proportion="0.7881973">
               <folding />
             </state>
           </provider>
@@ -227,6 +227,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.objc-networking">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="LoremPixel" TARGET_NAME="LoremPixel" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="LoremPixel" RUN_TARGET_NAME="LoremPixel" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -405,7 +406,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="33" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.8302344">
+        <state line="65" column="67" selection-start="2033" selection-end="2033" vertical-scroll-proportion="0.7881973">
           <folding />
         </state>
       </provider>
