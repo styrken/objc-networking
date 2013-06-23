@@ -10,6 +10,6 @@
 
 @interface AVHttpResponse : NSObject
 
-@property (nonatomic, assign) NSUInteger responseCode;
+@property (nonatomic, assign) NSUInteger statusCode;
 @property (nonatomic, strong) NSMutableData *data;
 @end

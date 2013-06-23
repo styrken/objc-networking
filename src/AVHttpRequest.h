@@ -27,34 +27,34 @@
  What kind of method is your request
 */
 enum {
-	HttpRequestMethodPost,
-	HttpRequestMethodGet,
-	HttpRequestMethodPut,
-	HttpRequestMethodDelete
+    AVHttpRequestMethodPost,
+    AVHttpRequestMethodGet,
+    AVHttpRequestMethodPut,
+    AVHttpRequestMethodDelete
 };
-typedef NSUInteger HttpRequestMethod;
+typedef NSUInteger AVHttpRequestMethod;
 
 /** Http Request State
  The current state of your request
 */
 enum {
-	HttpRequestStateUnknown,
-	HttpRequestStateDownloading,
-	HttpRequestStatePaused,
-	HttpRequestStateCancelled,
-	HttpRequestStateCompleted,
-	HttpRequestStateFailed
+    AVHttpRequestStateUnknown,
+    AVHttpRequestStateDownloading,
+    AVHttpRequestStatePaused,
+    AVHttpRequestStateCancelled,
+    AVHttpRequestStateCompleted,
+    AVHttpRequestStateFailed
 };
-typedef NSUInteger HttpRequestState;
+typedef NSUInteger AVHttpRequestState;
 
 /** Http Request Type
  How the reqest downloads data. Sync is blocking and can't be cancelled.
 */
 enum {
-	HttpRequestTypeAsync,
-	HttpRequestTypeSync // BLOCKING AND CAN'T BE CANCELLED
+    AVHttpRequestTypeAsync,
+    AVHttpRequestTypeSync // BLOCKING AND CAN'T BE CANCELLED
 };
-typedef NSUInteger HttpRequestType;
+typedef NSUInteger AVHttpRequestType;
 
 /** Http Request
  An http request is a simple object that makes it easy to download or send data over the internet. It supports both async and sync loading of data.
@@ -73,18 +73,18 @@ typedef NSUInteger HttpRequestType;
 - (id) initWithURLString:(NSString*)string;
 - (id) initWithURL:(NSURL*)url;
 
-@property (nonatomic, strong) NSMutableDictionary *requestArguments;
-@property (nonatomic, strong) NSMutableDictionary *requestHeaders;
+@property (nonatomic, strong) NSMutableDictionary *arguments;
+@property (nonatomic, strong) NSMutableDictionary *headers;
 
 @property (nonatomic, weak) id<HttpRequestProtocol> delegate;
 
-@property (nonatomic, assign) HttpRequestType requestType;
-@property (nonatomic, assign) HttpRequestMethod requestMethod;
-@property (nonatomic, assign, readonly) HttpRequestState requestState;
+@property (nonatomic, assign) AVHttpRequestType type;
+@property (nonatomic, assign) AVHttpRequestMethod method;
+@property (nonatomic, assign, readonly) AVHttpRequestState state;
 
-@property (nonatomic, strong) AVHttpResponse *requestResponse;
+@property (nonatomic, strong) AVHttpResponse *response;
 
-@property (nonatomic, strong) NSURL *requestUrl;
+@property (nonatomic, strong) NSURL *url;
 
 - (void) start;
 - (void) pause;

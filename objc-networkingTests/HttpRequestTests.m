@@ -19,22 +19,22 @@
 {
 	AVHttpRequest *request = [[AVHttpRequest alloc] init];
 	[request pause];
-	STAssertTrue(request.requestState == HttpRequestStatePaused, @"RequestState did not change to paused");
+	STAssertTrue(request.state == AVHttpRequestStatePaused, @"RequestState did not change to paused");
 }
 
 - (void) TestRequestStateCancelled
 {
 	AVHttpRequest *request = [[AVHttpRequest alloc] init];
 	[request cancel];
-	STAssertTrue(request.requestState == HttpRequestStateCancelled, @"RequestState did not change to cancelled");
+	STAssertTrue(request.state == AVHttpRequestStateCancelled, @"RequestState did not change to cancelled");
 }
 
 - (void) testDefaultRequest
 {
 	AVHttpRequest *request = [[AVHttpRequest alloc] init];
 
-	STAssertTrue(request.requestState == HttpRequestStateUnknown, @"RequestState was not nil");
-	STAssertTrue(request.requestMethod == HttpRequestMethodPost, @"RequestMethod was not POST");
+	STAssertTrue(request.state == AVHttpRequestStateUnknown, @"RequestState was not nil");
+	STAssertTrue(request.method == AVHttpRequestMethodPost, @"RequestMethod was not POST");
 }
 
 - (void) testDownloadOfFileSynchronous
@@ -43,13 +43,13 @@
 	// test, sorry :-)
 
 	AVHttpRequest *request = [AVHttpRequest requestWithURLString:@"http://lorempixel.com/400/200/"];
-	request.requestMethod = HttpRequestMethodGet;
-	request.requestType = HttpRequestTypeSync;
+	request.method = AVHttpRequestMethodGet;
+	request.type = AVHttpRequestTypeSync;
 
 	// Blocking
 	[request start];
 
-	STAssertTrue(request.requestResponse.data.length > 0, @"ResponseData lenght was not greater than zero");
+	STAssertTrue(request.response.data.length > 0, @"ResponseData lenght was not greater than zero");
 }
 
 @end

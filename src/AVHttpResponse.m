@@ -16,7 +16,7 @@
 	if(self)
 	{
 		self.data = [[NSMutableData alloc] init];
-		self.responseCode = 0;
+		self.statusCode = 0;
 	}
 
 	return self;

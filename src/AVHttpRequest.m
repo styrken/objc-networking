@@ -10,7 +10,7 @@
 #import "AVHttpResponse.h"
 
 @interface AVHttpRequest () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
-@property (nonatomic, assign, readwrite) HttpRequestState requestState;
+@property (nonatomic, assign, readwrite) AVHttpRequestState state;
 @property (nonatomic, assign) NSURLConnection *connection;
 @property (nonatomic, assign) NSTimeInterval startedTime;
 
@@ -42,14 +42,14 @@
 
 	if(self)
 	{
-		self.requestResponse = [[AVHttpResponse alloc] init];
+		self.response = [[AVHttpResponse alloc] init];
 
-		self.requestArguments = [[NSMutableDictionary alloc] init];
-		self.requestHeaders = [[NSMutableDictionary alloc] init];
+		self.arguments = [[NSMutableDictionary alloc] init];
+		self.headers = [[NSMutableDictionary alloc] init];
 
-		self.requestMethod = HttpRequestMethodPost;
-		self.requestState = HttpRequestStateUnknown;
-		self.requestType = HttpRequestTypeAsync;
+		self.method = AVHttpRequestMethodPost;
+		self.state = AVHttpRequestStateUnknown;
+		self.type = AVHttpRequestTypeAsync;
 
 		self.connection = nil;
 	}
@@ -63,7 +63,7 @@
 
 	if(self)
 	{
-		self.requestUrl = url;
+		self.url = url;
 	}
 
 	return self;
@@ -78,24 +78,24 @@
 
 - (void) start
 {
-	if(self.requestUrl == nil)
+	if(self.url == nil)
 		return;
 
-	if(self.requestState != HttpRequestStateDownloading)
+	if(self.state != AVHttpRequestStateDownloading)
 	{
-		self.requestState = HttpRequestStateDownloading;
+		self.state = AVHttpRequestStateDownloading;
 
 		if([self.delegate respondsToSelector:@selector(didStartRequest:)])
 		{
 			[self.delegate didStartRequest:self];
 		}
 		
-		switch (self.requestType) {
-			case HttpRequestTypeSync:
+		switch (self.type) {
+			case AVHttpRequestTypeSync:
 				[self downloadSynchronous];
 				break;
 
-			case HttpRequestTypeAsync:
+			case AVHttpRequestTypeAsync:
 			default:
 				[self downloadAsynchronous];
 				break;
@@ -123,22 +123,22 @@
 	}
 	else
 	{
-		self.requestResponse.responseCode = ((NSHTTPURLResponse*)response).statusCode;
-		self.requestResponse.data = data;
+		self.response.statusCode = ((NSHTTPURLResponse*)response).statusCode;
+		self.response.data = data;
 
 		if([self.delegate respondsToSelector:@selector(didFinishRequest:withResponse:)])
 		{
-			[self.delegate didFinishRequest:self withResponse:self.requestResponse];
+            [self.delegate didFinishRequest:self withResponse:self.response];
 		}
 	}
 }
 
 - (void) pause
 {
-	if(self.requestState != HttpRequestStatePaused)
+	if(self.state != AVHttpRequestStatePaused)
 	{
 		[self.connection cancel];
-		self.requestState = HttpRequestStatePaused;
+		self.state = AVHttpRequestStatePaused;
 		self.downloadedBytes = 0;
 
 		if([self.delegate respondsToSelector:@selector(didPauseRequest:)])
@@ -150,10 +150,10 @@
 
 - (void) cancel
 {
-	if(self.requestState != HttpRequestStateCancelled)
+	if(self.state != AVHttpRequestStateCancelled)
 	{
 		[self.connection cancel];
-		self.requestState = HttpRequestStateCancelled;
+		self.state = AVHttpRequestStateCancelled;
 		self.downloadedBytes = 0;
 		self.expectedRemainingBytes = 0;
 		self.expectedTotalBytes = 0;
@@ -169,23 +169,23 @@
 
 - (NSURLRequest *) buildURLRequest
 {
-	NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:self.requestUrl];
+	NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:self.url];
 
 	[urlRequest setValue:@"Objc-Networking /1.0" forHTTPHeaderField:@"User-Agent"];
 
-	switch (self.requestMethod) {
-		case HttpRequestMethodGet:
+	switch (self.method) {
+		case AVHttpRequestMethodGet:
 			[urlRequest setHTTPMethod:@"GET"];
 			break;
-		case HttpRequestMethodPut:
+		case AVHttpRequestMethodPut:
 			[urlRequest setHTTPMethod:@"PUT"];
 			break;
-		case HttpRequestMethodDelete:
+		case AVHttpRequestMethodDelete:
 			[urlRequest setHTTPMethod:@"DELETE"];
 			break;
 			
 		default:
-		case HttpRequestMethodPost:
+		case AVHttpRequestMethodPost:
 		{
 			NSData *args = [[self buildArgs] dataUsingEncoding:NSUTF8StringEncoding];
 
@@ -197,14 +197,14 @@
 		}
 	}
 
-	if(self.requestResponse.data.length > 0)
+	if(self.response.data.length > 0)
 	{
-		[urlRequest setValue:[NSString stringWithFormat:@"bytes=%llu-", self.requestResponse.data.length] forHTTPHeaderField:@"Range"];
+		[urlRequest setValue:[NSString stringWithFormat:@"bytes=%llu-", self.response.data.length] forHTTPHeaderField:@"Range"];
 	}
 
-	[self.requestHeaders enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-		[urlRequest setValue:key forHTTPHeaderField:value];
-	}];
+	[self.headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+        [urlRequest setValue:key forHTTPHeaderField:value];
+    }];
 
 	return urlRequest;
 }
@@ -213,9 +213,9 @@
 {
 	NSMutableString *args = [[NSMutableString alloc] init];
 
-	[self.requestArguments enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
-		[args appendFormat:@"%@=%@&", [self escapeString:key], [self escapeString:value]];
-	}];
+	[self.arguments enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
+        [args appendFormat:@"%@=%@&", [self escapeString:key], [self escapeString:value]];
+    }];
 
 	return args;
 }
@@ -230,15 +230,15 @@
 	}
 	
 	self.expectedRemainingBytes = response.expectedContentLength;
-	self.requestResponse.responseCode = ((NSHTTPURLResponse*)response).statusCode;
+	self.response.statusCode = ((NSHTTPURLResponse*)response).statusCode;
 	self.startedTime = [[NSDate date] timeIntervalSince1970];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-	if(self.requestState == HttpRequestStateDownloading)
+	if(self.state == AVHttpRequestStateDownloading)
 	{
-		[self.requestResponse.data appendData:data];
+		[self.response.data appendData:data];
 
 		self.downloadedBytes += data.length;
 
@@ -251,7 +251,7 @@
 
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	self.requestState = HttpRequestStateFailed;
+	self.state = AVHttpRequestStateFailed;
 
 	if([self.delegate respondsToSelector:@selector(didFailRequest:withError:)])
 	{
@@ -261,11 +261,11 @@
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	self.requestState = HttpRequestStateCompleted;
+	self.state = AVHttpRequestStateCompleted;
 	
 	if([self.delegate respondsToSelector:@selector(didFinishRequest:withResponse:)])
 	{
-		[self.delegate didFinishRequest:self withResponse:self.requestResponse];
+        [self.delegate didFinishRequest:self withResponse:self.response];
 	}
 }
 
