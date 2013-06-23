@@ -193,7 +193,7 @@
 		{
 			NSData *args = [[self buildArgs] dataUsingEncoding:NSUTF8StringEncoding];
 
-			[urlRequest setValue:[NSString stringWithFormat:@"%i", args.length] forHTTPHeaderField:@"Content-Length"];
+			[urlRequest setValue:[NSString stringWithFormat:@"%li", (unsigned long)args.length] forHTTPHeaderField:@"Content-Length"];
 			[urlRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 			[urlRequest setHTTPMethod:@"POST"];
 			[urlRequest setHTTPBody:args];
