@@ -56,7 +56,25 @@ Then start a request
 
 ### Start, pause, cancel requests ###
 
-Need documentation
+```objective-c
+/** Start
+  Start the request according to type. When using AVHttpRequestTypeSync this method blocks untill it is done.
+  */
+- (void) start;
+
+/** Pause
+  Stops the request untill you call start again. When a request have been paused it will remember it current position in the download.
+  Only async requests can be cancelled.
+  */
+- (void) pause;
+
+/** Cancel
+  Cancels the request throwing away all downloaded data.     
+  Only async requests can be cancelled.
+  */
+- (void) cancel;
+```
+
 
 ### Using the HttpRequestQueue ###
 
