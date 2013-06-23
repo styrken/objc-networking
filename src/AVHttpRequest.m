@@ -203,7 +203,7 @@
 
 	if(self.response.data.length > 0)
 	{
-		[urlRequest setValue:[NSString stringWithFormat:@"bytes=%llu-", self.response.data.length] forHTTPHeaderField:@"Range"];
+		[urlRequest setValue:[NSString stringWithFormat:@"bytes=%lu-", (unsigned long)self.response.data.length] forHTTPHeaderField:@"Range"];
 	}
 
 	[self.headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *value, BOOL *stop) {
@@ -225,6 +225,21 @@
 }
 
 #pragma mark - NSURLConnection delegates
+
+- (void) connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+{
+    if ([challenge previousFailureCount] == 0)
+    {
+        [[challenge sender] useCredential:self.credentials forAuthenticationChallenge:challenge];
+    }
+    else
+    {
+        if([self.delegate respondsToSelector:@selector(didFailRequest:withError:)])
+        {
+            [self.delegate didFailRequest:self withError:challenge.error];
+        }
+    }
+}
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {

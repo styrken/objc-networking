@@ -140,6 +140,11 @@ What URL the request should talk with
 */
 @property (nonatomic, strong) NSURL *url;
 
+/** URLCredentials
+If your server wants some url credentials you should supply them here
+*/
+@property (nonatomic, strong) NSURLCredential *credentials;
+
 #pragma mark - Public methods
 
 /** Start
