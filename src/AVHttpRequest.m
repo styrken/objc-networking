@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Appværk. All rights reserved.
 //
 
-#import "HttpRequest.h"
-#import "HttpResponse.h"
+#import "AVHttpRequest.h"
+#import "AVHttpResponse.h"
 
-@interface HttpRequest () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+@interface AVHttpRequest () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 @property (nonatomic, assign, readwrite) HttpRequestState requestState;
 @property (nonatomic, assign) NSURLConnection *connection;
 @property (nonatomic, assign) NSTimeInterval startedTime;
@@ -20,16 +20,16 @@
 
 @end
 
-@implementation HttpRequest
+@implementation AVHttpRequest
 
 #pragma mark - Static factories
 
-+ (HttpRequest*) requestWithURL:(NSURL *)url
++ (AVHttpRequest*) requestWithURL:(NSURL *)url
 {
 	return [[self alloc] initWithURL:url];
 }
 
-+ (HttpRequest*) requestWithURLString:(NSString *)string
++ (AVHttpRequest*) requestWithURLString:(NSString *)string
 {
 	return [[self alloc] initWithURLString:string];
 }
@@ -42,7 +42,7 @@
 
 	if(self)
 	{
-		self.requestResponse = [[HttpResponse alloc] init];
+		self.requestResponse = [[AVHttpResponse alloc] init];
 
 		self.requestArguments = [[NSMutableDictionary alloc] init];
 		self.requestHeaders = [[NSMutableDictionary alloc] init];

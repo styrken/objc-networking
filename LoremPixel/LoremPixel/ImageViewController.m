@@ -7,8 +7,8 @@
 //
 
 #import "ImageViewController.h"
-#import <objc-networking-ios/HttpRequest.h>
-#import <objc-networking-ios/HttpResponse.h>
+#import <objc-networking-ios/AVHttpRequest.h>
+#import <objc-networking-ios/AVHttpResponse.h>
 
 
 @interface ImageViewController () <HttpRequestProtocol>
@@ -40,25 +40,25 @@
 
 - (IBAction)reload:(id)sender
 {
-	HttpRequest *request = [HttpRequest requestWithURLString:@"http://lorempixel.com/1920/1920/"];
+	AVHttpRequest *request = [AVHttpRequest requestWithURLString:@"http://lorempixel.com/1920/1920/"];
     request.delegate = self;
     [request start];
 }
 
 #pragma mark - HttpRequest Protocol
 
-- (void) didStartRequest:(HttpRequest *)request
+- (void) didStartRequest:(AVHttpRequest *)request
 {
     self.imageView.image = nil;
     [self.spinner startAnimating];
 }
 
-- (void) didFailRequest:(HttpRequest *)request withError:(NSError *)error
+- (void) didFailRequest:(AVHttpRequest *)request withError:(NSError *)error
 {
     [self.spinner stopAnimating];
 }
 
-- (void) didFinishRequest:(HttpRequest *)request withResponse:(HttpResponse *)response
+- (void) didFinishRequest:(AVHttpRequest *)request withResponse:(AVHttpResponse *)response
 {
     [self.spinner stopAnimating];
     self.imageView.image = [UIImage imageWithData:response.data];

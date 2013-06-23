@@ -7,31 +7,31 @@
 //
 
 #import "HttpRequestTests.h"
-#import "HttpRequest.h"
-#import "HttpResponse.h"
+#import "AVHttpRequest.h"
+#import "AVHttpResponse.h"
 
-@interface HttpRequestTests () <HttpRequestProtocol>
+@interface HttpRequestTests ()
 @end
 
 @implementation HttpRequestTests
 
 - (void) testRequestPauseStates
 {
-	HttpRequest *request = [[HttpRequest alloc] init];
+	AVHttpRequest *request = [[AVHttpRequest alloc] init];
 	[request pause];
 	STAssertTrue(request.requestState == HttpRequestStatePaused, @"RequestState did not change to paused");
 }
 
 - (void) TestRequestStateCancelled
 {
-	HttpRequest *request = [[HttpRequest alloc] init];
+	AVHttpRequest *request = [[AVHttpRequest alloc] init];
 	[request cancel];
 	STAssertTrue(request.requestState == HttpRequestStateCancelled, @"RequestState did not change to cancelled");
 }
 
 - (void) testDefaultRequest
 {
-	HttpRequest *request = [[HttpRequest alloc] init];
+	AVHttpRequest *request = [[AVHttpRequest alloc] init];
 
 	STAssertTrue(request.requestState == HttpRequestStateUnknown, @"RequestState was not nil");
 	STAssertTrue(request.requestMethod == HttpRequestMethodPost, @"RequestMethod was not POST");
@@ -42,7 +42,7 @@
 	// This is not a real unittest but i wan't to test whole flow so i wont be mocking anything in this
 	// test, sorry :-)
 
-	HttpRequest *request = [HttpRequest requestWithURLString:@"http://lorempixel.com/400/200/"];
+	AVHttpRequest *request = [AVHttpRequest requestWithURLString:@"http://lorempixel.com/400/200/"];
 	request.requestMethod = HttpRequestMethodGet;
 	request.requestType = HttpRequestTypeSync;
 

@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Appværk. All rights reserved.
 //
 
-#import "HttpRequestQueue.h"
+#import "AVHttpRequestQueue.h"
 
-@implementation HttpRequestQueue
+@implementation AVHttpRequestQueue
 
 
 

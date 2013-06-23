@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0C6EE8177705E000F921DF /* AVHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0C6EE7177705E000F921DF /* AVHttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B111E1F17733ED300BE0738 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E1E17733ED300BE0738 /* Cocoa.framework */; };
 		3B111E3117733ED300BE0738 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E3017733ED300BE0738 /* SenTestingKit.framework */; };
 		3B111E3217733ED300BE0738 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B111E1E17733ED300BE0738 /* Cocoa.framework */; };
@@ -14,19 +15,18 @@
 		3B111E3B17733ED300BE0738 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B111E3917733ED300BE0738 /* InfoPlist.strings */; };
 		3B111E3E17733ED300BE0738 /* objc_networkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E3D17733ED300BE0738 /* objc_networkingTests.m */; };
 		3B111E551774698C00BE0738 /* HttpRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B111E541774698C00BE0738 /* HttpRequestTests.m */; };
+		3BA2F5561777066E00EE09BA /* AVHttpRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA2F5551777066E00EE09BA /* AVHttpRequestQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BDABD6A177706A5009846A2 /* AVHttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BDABD69177706A5009846A2 /* AVHttpResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BDABD6B177706C7009846A2 /* AVHttpRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B0C6EE7177705E000F921DF /* AVHttpRequest.h */; };
+		3BDABD6C177706C9009846A2 /* AVHttpRequestQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BA2F5551777066E00EE09BA /* AVHttpRequestQueue.h */; };
+		3BDABD6D177706CB009846A2 /* AVHttpResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BDABD69177706A5009846A2 /* AVHttpResponse.h */; };
 		3BEEEAC61775E286009A9401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEEEAC51775E286009A9401 /* Foundation.framework */; };
-		3BEEEADE1775E375009A9401 /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEEEAD81775E375009A9401 /* HttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BEEEADF1775E375009A9401 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEAD91775E375009A9401 /* HttpRequest.m */; };
-		3BEEEAE01775E375009A9401 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEAD91775E375009A9401 /* HttpRequest.m */; };
-		3BEEEAE11775E375009A9401 /* HttpRequestQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BEEEAE21775E375009A9401 /* HttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */; };
-		3BEEEAE31775E375009A9401 /* HttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */; };
-		3BEEEAE41775E375009A9401 /* HttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEEEADC1775E375009A9401 /* HttpResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BEEEAE51775E375009A9401 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADD1775E375009A9401 /* HttpResponse.m */; };
-		3BEEEAE61775E375009A9401 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADD1775E375009A9401 /* HttpResponse.m */; };
-		3BEEEAE81775E3B1009A9401 /* HttpRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BEEEAD81775E375009A9401 /* HttpRequest.h */; };
-		3BEEEAE91775E3B6009A9401 /* HttpRequestQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */; };
-		3BEEEAEA1775E3B8009A9401 /* HttpResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BEEEADC1775E375009A9401 /* HttpResponse.h */; };
+		3BEEEADF1775E375009A9401 /* AVHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEAD91775E375009A9401 /* AVHttpRequest.m */; };
+		3BEEEAE01775E375009A9401 /* AVHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEAD91775E375009A9401 /* AVHttpRequest.m */; };
+		3BEEEAE21775E375009A9401 /* AVHttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADB1775E375009A9401 /* AVHttpRequestQueue.m */; };
+		3BEEEAE31775E375009A9401 /* AVHttpRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADB1775E375009A9401 /* AVHttpRequestQueue.m */; };
+		3BEEEAE51775E375009A9401 /* AVHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADD1775E375009A9401 /* AVHttpResponse.m */; };
+		3BEEEAE61775E375009A9401 /* AVHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEEEADD1775E375009A9401 /* AVHttpResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,15 +46,16 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				3BEEEAE81775E3B1009A9401 /* HttpRequest.h in CopyFiles */,
-				3BEEEAE91775E3B6009A9401 /* HttpRequestQueue.h in CopyFiles */,
-				3BEEEAEA1775E3B8009A9401 /* HttpResponse.h in CopyFiles */,
+				3BDABD6B177706C7009846A2 /* AVHttpRequest.h in CopyFiles */,
+				3BDABD6C177706C9009846A2 /* AVHttpRequestQueue.h in CopyFiles */,
+				3BDABD6D177706CB009846A2 /* AVHttpResponse.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B0C6EE7177705E000F921DF /* AVHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHttpRequest.h; sourceTree = "<group>"; };
 		3B111E1B17733ED300BE0738 /* libobjc-networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B111E1E17733ED300BE0738 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B111E2117733ED300BE0738 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -69,15 +70,14 @@
 		3B111E3D17733ED300BE0738 /* objc_networkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_networkingTests.m; sourceTree = "<group>"; };
 		3B111E531774698B00BE0738 /* HttpRequestTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestTests.h; sourceTree = "<group>"; };
 		3B111E541774698C00BE0738 /* HttpRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestTests.m; sourceTree = "<group>"; };
+		3BA2F5551777066E00EE09BA /* AVHttpRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHttpRequestQueue.h; sourceTree = "<group>"; };
+		3BDABD69177706A5009846A2 /* AVHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHttpResponse.h; sourceTree = "<group>"; };
 		3BEEEAC41775E286009A9401 /* libobjc-networking-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-networking-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEEEAC51775E286009A9401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BEEEAC91775E286009A9401 /* objc-networking-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-networking-ios-Prefix.pch"; sourceTree = "<group>"; };
-		3BEEEAD81775E375009A9401 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		3BEEEAD91775E375009A9401 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestQueue.h; sourceTree = "<group>"; };
-		3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestQueue.m; sourceTree = "<group>"; };
-		3BEEEADC1775E375009A9401 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
-		3BEEEADD1775E375009A9401 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
+		3BEEEAD91775E375009A9401 /* AVHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHttpRequest.m; sourceTree = "<group>"; };
+		3BEEEADB1775E375009A9401 /* AVHttpRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHttpRequestQueue.m; sourceTree = "<group>"; };
+		3BEEEADD1775E375009A9401 /* AVHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHttpResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,12 +207,12 @@
 		3BEEEAD71775E375009A9401 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				3BEEEAD81775E375009A9401 /* HttpRequest.h */,
-				3BEEEAD91775E375009A9401 /* HttpRequest.m */,
-				3BEEEADA1775E375009A9401 /* HttpRequestQueue.h */,
-				3BEEEADB1775E375009A9401 /* HttpRequestQueue.m */,
-				3BEEEADC1775E375009A9401 /* HttpResponse.h */,
-				3BEEEADD1775E375009A9401 /* HttpResponse.m */,
+				3B0C6EE7177705E000F921DF /* AVHttpRequest.h */,
+				3BEEEAD91775E375009A9401 /* AVHttpRequest.m */,
+				3BA2F5551777066E00EE09BA /* AVHttpRequestQueue.h */,
+				3BEEEADB1775E375009A9401 /* AVHttpRequestQueue.m */,
+				3BDABD69177706A5009846A2 /* AVHttpResponse.h */,
+				3BEEEADD1775E375009A9401 /* AVHttpResponse.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -234,9 +234,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEEEADE1775E375009A9401 /* HttpRequest.h in Headers */,
-				3BEEEAE11775E375009A9401 /* HttpRequestQueue.h in Headers */,
-				3BEEEAE41775E375009A9401 /* HttpResponse.h in Headers */,
+				3B0C6EE8177705E000F921DF /* AVHttpRequest.h in Headers */,
+				3BA2F5561777066E00EE09BA /* AVHttpRequestQueue.h in Headers */,
+				3BDABD6A177706A5009846A2 /* AVHttpResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,9 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEEEADF1775E375009A9401 /* HttpRequest.m in Sources */,
-				3BEEEAE21775E375009A9401 /* HttpRequestQueue.m in Sources */,
-				3BEEEAE51775E375009A9401 /* HttpResponse.m in Sources */,
+				3BEEEADF1775E375009A9401 /* AVHttpRequest.m in Sources */,
+				3BEEEAE21775E375009A9401 /* AVHttpRequestQueue.m in Sources */,
+				3BEEEAE51775E375009A9401 /* AVHttpResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEEEAE01775E375009A9401 /* HttpRequest.m in Sources */,
-				3BEEEAE31775E375009A9401 /* HttpRequestQueue.m in Sources */,
-				3BEEEAE61775E375009A9401 /* HttpResponse.m in Sources */,
+				3BEEEAE01775E375009A9401 /* AVHttpRequest.m in Sources */,
+				3BEEEAE31775E375009A9401 /* AVHttpRequestQueue.m in Sources */,
+				3BEEEAE61775E375009A9401 /* AVHttpResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +578,7 @@
 				3BEEEAD01775E286009A9401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

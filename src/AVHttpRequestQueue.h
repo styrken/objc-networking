@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class HttpRequest;
+@class AVHttpRequest;
 
-@interface HttpRequestQueue : NSObject
+@interface AVHttpRequestQueue : NSObject
 
 @property (nonatomic, retain) NSMutableArray *queue;
 
-- (void) enqueue:(HttpRequest*)request;
-- (void) dequeue:(HttpRequest*)request;
+- (void) enqueue:(AVHttpRequest*)request;
+- (void) dequeue:(AVHttpRequest*)request;
 
 - (void) start;
 - (void) pause;

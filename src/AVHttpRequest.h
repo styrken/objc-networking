@@ -7,20 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-@class HttpResponse;
-@class HttpRequest;
+@class AVHttpResponse;
+@class AVHttpRequest;
 
 /** Http Request Protocol
  A protocol you can implement to get notifications about a request
 */
 @protocol HttpRequestProtocol <NSObject>
-- (void) didFinishRequest:(HttpRequest*)request withResponse:(HttpResponse*)response;
-- (void) didFailRequest:(HttpRequest*)request withError:(NSError*)error;
+- (void) didFinishRequest:(AVHttpRequest*)request withResponse:(AVHttpResponse*)response;
+- (void) didFailRequest:(AVHttpRequest*)request withError:(NSError*)error;
 @optional
-- (void) didStartRequest:(HttpRequest*)request;
-- (void) didStopRequest:(HttpRequest*)request;
-- (void) didPauseRequest:(HttpRequest*)request;
-- (void) estimatedTimeLeft:(NSTimeInterval)seconds forRequest:(HttpRequest*)request;
+- (void) didStartRequest:(AVHttpRequest*)request;
+- (void) didStopRequest:(AVHttpRequest*)request;
+- (void) didPauseRequest:(AVHttpRequest*)request;
+- (void) estimatedTimeLeft:(NSTimeInterval)seconds forRequest:(AVHttpRequest*)request;
 @end
 
 /** Http Request Method
@@ -65,10 +65,10 @@ typedef NSUInteger HttpRequestType;
  
  The HttpRequest object is also capable of estimating time left of he current download.
 */
-@interface HttpRequest : NSObject
+@interface AVHttpRequest : NSObject
 
-+ (HttpRequest*) requestWithURL:(NSURL*)url;
-+ (HttpRequest*) requestWithURLString:(NSString*)string;
++ (AVHttpRequest*) requestWithURL:(NSURL*)url;
++ (AVHttpRequest*) requestWithURLString:(NSString*)string;
 
 - (id) initWithURLString:(NSString*)string;
 - (id) initWithURL:(NSURL*)url;
@@ -82,7 +82,7 @@ typedef NSUInteger HttpRequestType;
 @property (nonatomic, assign) HttpRequestMethod requestMethod;
 @property (nonatomic, assign, readonly) HttpRequestState requestState;
 
-@property (nonatomic, strong) HttpResponse *requestResponse;
+@property (nonatomic, strong) AVHttpResponse *requestResponse;
 
 @property (nonatomic, strong) NSURL *requestUrl;
 

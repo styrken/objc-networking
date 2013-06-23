@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Appværk. All rights reserved.
 //
 
-#import "HttpResponse.h"
+#import "AVHttpResponse.h"
 
-@implementation HttpResponse
+@implementation AVHttpResponse
 
 - (id) init
 {

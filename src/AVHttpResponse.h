@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HttpResponse : NSObject
+@interface AVHttpResponse : NSObject
 
 @property (nonatomic, assign) NSUInteger responseCode;
 @property (nonatomic, strong) NSMutableData *data;
