@@ -12,35 +12,7 @@ Simple and lightweight objective-c http-networking library.
 
 **Example:**
 
-Import headers and implement the procotol
-
-YourClass.h
-```objective-c
-#import <UIKit/UIKit.h>
-#import <objc-networking-ios/AVHttpRequest.h>
-#import <objc-networking-ios/AVHttpResponse.h>
-
-@interface YourClass : UIViewController <AVHttpRequestProtocol>
-
-@end
-```
-
-YourClass.m
-```objective-c
-- (void) didStartRequest:(AVHttpRequest *)request
-{
-}
-
-- (void) didFailRequest:(AVHttpRequest *)request withError:(NSError *)error
-{
-}
-
-- (void) didFinishRequest:(AVHttpRequest *)request withResponse:(AVHttpResponse *)response
-{
-}
-```
-
-Then start a request
+Take a look at the LoremPixel example code.
 
 ```objective-c
 
