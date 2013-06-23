@@ -17,25 +17,25 @@ Import headers and implement the procotol
 YourClass.h
 ```objective-c
 #import <UIKit/UIKit.h>
-#import <objc-networking-ios/HttpRequest.h>
-#import <objc-networking-ios/HttpResponse.h>
+#import <objc-networking-ios/AVHttpRequest.h>
+#import <objc-networking-ios/AVHttpResponse.h>
 
-@interface YourClass : UIViewController <HttpRequestProtocol>
+@interface YourClass : UIViewController <AVHttpRequestProtocol>
 
 @end
 ```
 
 YourClass.m
 ```objective-c
-- (void) didStartRequest:(HttpRequest *)request
+- (void) didStartRequest:(AVHttpRequest *)request
 {
 }
 
-- (void) didFailRequest:(HttpRequest *)request withError:(NSError *)error
+- (void) didFailRequest:(AVHttpRequest *)request withError:(NSError *)error
 {
 }
 
-- (void) didFinishRequest:(HttpRequest *)request withResponse:(HttpResponse *)response
+- (void) didFinishRequest:(AVHttpRequest *)request withResponse:(AVHttpResponse *)response
 {
 }
 ```
@@ -48,7 +48,7 @@ Then start a request
 {
 	[super viewDidLoad];
 
-	HttpRequest *request = [HttpRequest requestWithURLString:@"http://lorempixel.com/1920/1920/"];
+	AVHttpRequest *request = [HttpRequest requestWithURLString:@"http://lorempixel.com/1920/1920/"];
 	request.delegate = self;
 	[request start];
 }
