@@ -55,3 +55,21 @@ Need documentation
 ### Uploading files ###
 
 Need documentation
+
+
+### AVHttpRequestProtocol ###
+
+```objective-c
+/** Http Request Protocol
+   A protocol you can implement to get notifications about a request
+   */
+@protocol AVHttpRequestProtocol <NSObject>
+- (void) didFinishRequest:(AVHttpRequest*)request withResponse:(AVHttpResponse*)response;
+- (void) didFailRequest:(AVHttpRequest*)request withError:(NSError*)error;
+@optional
+- (void) didStartRequest:(AVHttpRequest*)request;
+- (void) didStopRequest:(AVHttpRequest*)request;
+- (void) didPauseRequest:(AVHttpRequest*)request;
+- (void) estimatedTimeLeft:(NSTimeInterval)seconds forRequest:(AVHttpRequest*)request;
+@end
+```
