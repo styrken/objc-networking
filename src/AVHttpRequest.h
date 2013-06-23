@@ -67,27 +67,94 @@ typedef NSUInteger AVHttpRequestType;
 */
 @interface AVHttpRequest : NSObject
 
+#pragma mark - AVHttpRequest initializers
+
+/** Request With URL
+Shorthand for alloc/init procedure
+*/
 + (AVHttpRequest*) requestWithURL:(NSURL*)url;
+
+/** Request With URL
+Shorthand for alloc/init procedure
+*/
 + (AVHttpRequest*) requestWithURLString:(NSString*)string;
 
+/** Init with Url String
+Creates an httprequest object with default values using a specific url
+*/
 - (id) initWithURLString:(NSString*)string;
+
+/** Init with Url
+Creates an httprequest object with default values using a specific url
+*/
 - (id) initWithURL:(NSURL*)url;
 
-@property (nonatomic, strong) NSMutableDictionary *arguments;
-@property (nonatomic, strong) NSMutableDictionary *headers;
+#pragma mark - AVHttpRequest Properties
 
+/** Delegate
+A delegate class that implements AVVHttpRequestProtocol to get notifications when events happens. See AVHttpRequestProtocol for a list of events.
+*/
 @property (nonatomic, weak) id<AVHttpRequestProtocol> delegate;
 
+/** Arguments
+A key/value store of arguments to pass along as body for the request
+*/
+@property (nonatomic, strong, readonly) NSMutableDictionary *arguments;
+
+/** Headers
+A key/value store of optional headers to send with he request
+*/
+@property (nonatomic, strong, readonly) NSMutableDictionary *headers;
+
+/** Type
+Specifies if the request should be sync or async
+
+ASYNC
+    The request is loaded in a background thread, everytime something happens the delegate is called. Async requests can be cancelled or paused
+
+SYNC
+    The request is loaded on the current thread block all other activities. As soon as you call [request start] the thread blocks untill the request is done.
+    When the request starts it calls its delegate didStartRequest:(AVHttpRequest*)request, and when it finishes it either calls didFailRequest:(AVHttpRequest *)request or didFinishHttpRequest:(AVHttpRequest*)request withResponse:(AVHttpResponse*)response;
+
+    If you don't add a delegate you can always get the repsonse throigh request.response property
+*/
 @property (nonatomic, assign) AVHttpRequestType type;
+
+/** Method
+The method to use when sending the request. This can be GET, POST, PUT, DELETE, UPDATE. Your server might not be able to understand anything else than GET and POST.
+*/
 @property (nonatomic, assign) AVHttpRequestMethod method;
+
+/** State
+Describes the current state of the request.
+*/
 @property (nonatomic, assign, readonly) AVHttpRequestState state;
 
+/** Response
+Holds an response object with a statusCode and the delivered data
+*/
 @property (nonatomic, strong) AVHttpResponse *response;
 
+/** URL
+What URL the request should talk with
+*/
 @property (nonatomic, strong) NSURL *url;
 
+#pragma mark - Public methods
+
+/** Start
+Start the request according to type. When using AVHttpRequestTypeSync this method blocks untill it is done.
+*/
 - (void) start;
+
+/** Pause
+Stops the request untill you call start again. When a request have been paused it will remember it current position in the download.
+*/
 - (void) pause;
+
+/** Cancel
+Cancels the request throwing away all downloaded data.
+*/
 - (void) cancel;
 
 @end

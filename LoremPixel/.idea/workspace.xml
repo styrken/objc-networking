@@ -4,9 +4,9 @@
     <list default="true" id="f96fff04-d058-450f-90cf-e84499bdda36" name="Default" comment="" />
     <ignored path="LoremPixel.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AVHttpRequest.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984561898" ignored="false" />
+    <file path="/AVHttpRequest.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371985298303" ignored="false" />
     <file path="/AVHttpResponse.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984448187" ignored="false" />
-    <file path="$PROJECT_DIR$/LoremPixel/ImageViewController.m" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984562278" ignored="false" />
+    <file path="/AVHttpRequest.m" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371985311098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,16 @@
       <file leaf-file-name="AVHttpRequest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="76" selection-start="4425" selection-end="4425" vertical-scroll-proportion="0.0">
+            <state line="160" column="38" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoremPixel/ImageViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="11" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,7 +83,7 @@
       <file leaf-file-name="AVHttpRequest.h" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="330" selection-end="330" vertical-scroll-proportion="0.18189168">
+            <state line="157" column="9" selection-start="4996" selection-end="4996" vertical-scroll-proportion="1.9037995">
               <folding />
             </state>
           </provider>
@@ -92,6 +101,7 @@
       <list>
         <option value="$PROJECT_DIR$/../src/AVHttpResponse.h" />
         <option value="$PROJECT_DIR$/../src/AVHttpRequest.h" />
+        <option value="$PROJECT_DIR$/../src/AVHttpRequest.m" />
       </list>
     </option>
   </component>
@@ -379,16 +389,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LoremPixel/ImageViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="11" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="76" selection-start="4425" selection-end="4425" vertical-scroll-proportion="0.0">
+        <state line="160" column="38" selection-start="3449" selection-end="3449" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="330" selection-end="330" vertical-scroll-proportion="0.18189168">
+        <state line="157" column="9" selection-start="4996" selection-end="4996" vertical-scroll-proportion="1.9037995">
           <folding />
         </state>
       </provider>

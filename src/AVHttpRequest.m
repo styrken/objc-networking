@@ -157,6 +157,8 @@
 		self.downloadedBytes = 0;
 		self.expectedRemainingBytes = 0;
 		self.expectedTotalBytes = 0;
+        self.response.data = nil;
+        self.response.statusCode = -1;
 
 		if([self.delegate respondsToSelector:@selector(didStopRequest:)])
 		{
