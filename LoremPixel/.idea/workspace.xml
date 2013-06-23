@@ -4,7 +4,7 @@
     <list default="true" id="f96fff04-d058-450f-90cf-e84499bdda36" name="Default" comment="" />
     <ignored path="LoremPixel.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AVHttpRequest.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371985405191" ignored="false" />
+    <file path="/AVHttpRequest.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371985476043" ignored="false" />
     <file path="/AVHttpResponse.h" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371984448187" ignored="false" />
     <file path="/AVHttpRequest.m" changelist="f96fff04-d058-450f-90cf-e84499bdda36" time="1371985311098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,7 +83,7 @@
       <file leaf-file-name="AVHttpRequest.h" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="0" selection-start="4616" selection-end="5080" vertical-scroll-proportion="0.7332255">
+            <state line="151" column="33" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.8302344">
               <folding />
             </state>
           </provider>
@@ -405,7 +405,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../src/AVHttpRequest.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="4616" selection-end="5080" vertical-scroll-proportion="0.7332255">
+        <state line="151" column="33" selection-start="4931" selection-end="4931" vertical-scroll-proportion="0.8302344">
           <folding />
         </state>
       </provider>

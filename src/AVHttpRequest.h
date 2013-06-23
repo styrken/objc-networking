@@ -149,7 +149,7 @@ Start the request according to type. When using AVHttpRequestTypeSync this metho
 
 /** Pause
 Stops the request untill you call start again. When a request have been paused it will remember it current position in the download.
-Only async requests can be cancelled.
+Only async requests can be paused.
 */
 - (void) pause;
 
