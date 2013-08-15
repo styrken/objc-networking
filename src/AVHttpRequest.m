@@ -193,6 +193,11 @@
 
 			[urlRequest setValue:[NSString stringWithFormat:@"%li", (unsigned long)args.length] forHTTPHeaderField:@"Content-Length"];
 			[urlRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+			
+			[self.headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
+				[urlRequest setValue:obj forHTTPHeaderField:key];
+			}];
+			
 			[urlRequest setHTTPMethod:@"POST"];
 			[urlRequest setHTTPBody:args];
 			break;

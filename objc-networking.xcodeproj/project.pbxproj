@@ -515,6 +515,7 @@
 		3BEEEACF1775E286009A9401 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/objc_networking_ios.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objc-networking-ios/objc-networking-ios-Prefix.pch";
@@ -529,6 +530,7 @@
 		3BEEEAD01775E286009A9401 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/objc_networking_ios.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "objc-networking-ios/objc-networking-ios-Prefix.pch";
