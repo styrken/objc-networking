@@ -99,12 +99,12 @@ A delegate class that implements AVVHttpRequestProtocol to get notifications whe
 /** Arguments
 A key/value store of arguments to pass along as body for the request
 */
-@property (nonatomic, strong) NSMutableDictionary *arguments;
+@property (nonatomic, strong) NSDictionary *arguments;
 
 /** Headers
 A key/value store of optional headers to send with he request
 */
-@property (nonatomic, strong) NSMutableDictionary *headers;
+@property (nonatomic, strong) NSDictionary *headers;
 
 /** Type
 Specifies if the request should be sync or async
