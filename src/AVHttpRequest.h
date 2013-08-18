@@ -94,7 +94,7 @@ Creates an httprequest object with default values using a specific url
 /** Delegate
 A delegate class that implements AVVHttpRequestProtocol to get notifications when events happens. See AVHttpRequestProtocol for a list of events.
 */
-@property (nonatomic, weak) id<AVHttpRequestProtocol> delegate;
+@property (nonatomic, assign) id<AVHttpRequestProtocol> delegate;
 
 /** Arguments
 A key/value store of arguments to pass along as body for the request
